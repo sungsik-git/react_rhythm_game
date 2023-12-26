@@ -1,6 +1,8 @@
 [build]
     command = "npm run build"
-    publish = "path/to/your/build/directory"
+    publish = "build"
+    base = "root"
+
 [[redirects]]
     from = "/*"
     to = "/index.html"
