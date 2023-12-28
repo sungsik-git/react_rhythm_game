@@ -1,8 +1,0 @@
-[build]
-  command = "npm run build"
-  publish = "build"
-
-[context.production]
-  command = "npm run build"
-  publish = "build"
-  base = "/opt/build/repo"  # 여기를 프로젝트 루트 디렉토리로 변경하세요
