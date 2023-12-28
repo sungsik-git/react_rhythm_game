@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
 import './App.css';
-import Backgrounnd from './components/Background';
-import GameStartButton from './components/GameStartButton';
+import HomeComponent from './components/HomeComponent';
+import GameComponent from './components/GameComponent';
 
 function App() {
-  const [viewMode, setViewMode] = useState("home")
-  console.log(viewMode)
+  const [viewMode, setViewMode] = useState("home");
+
+  if(viewMode === 'home'){
+
+  }else if(viewMode === 'game'){
+
+  }
+
   return (
     <div className="App">
-      <Backgrounnd viewMode={viewMode}/>
-      <GameStartButton />
+      {viewMode === 'home' && <HomeComponent 
+        viewMode={viewMode}
+        setViewMode={setViewMode}/>}
+      {viewMode === 'game' && <GameComponent viewMode={viewMode}/>}
     </div>
   );
 }
