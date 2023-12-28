@@ -17,7 +17,9 @@ function App() {
       {viewMode === 'home' && <HomeComponent 
         viewMode={viewMode}
         setViewMode={setViewMode}/>}
-      {viewMode === 'game' && <GameComponent viewMode={viewMode}/>}
+      {viewMode === 'game' && <GameComponent
+        viewMode={viewMode}
+        setViewMode={setViewMode}/>}
     </div>
   );
 }

@@ -3,7 +3,7 @@
   height: 1080px;
 }
 
-#gameStartButton{
+#gameStartButton, #homeButton{
   position: absolute;
   width: 200px;
   height: 100px;

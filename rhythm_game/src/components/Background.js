@@ -4,9 +4,9 @@ function Background(props) {
     var viewMode = props.viewMode;
     var background = null;
     if(viewMode === 'home'){
-        background = <img src={require('../img/background.png')} id='background'/>
+        background = <img src={require('../img/home_background.png')} id='background'/>
     }else if(viewMode === 'game'){
-        background = <img src={require('../img/game1_background.png')} id='background'/>
+        background = <img src={require('../img/game_choice_background.jpg')} id='background'/>
     }
   return background;
 }
