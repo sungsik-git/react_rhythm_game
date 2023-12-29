@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
-import HomeComponent from './components/HomeComponent';
-import GameChoiceComponent from './components/GameChoiceComponent';
-import GamePlayComponent from './components/GamePlayComponent';
+import HomeComponent from './components/homepage/HomeComponent';
+import GameChoiceComponent from './components/homepage/GameChoiceComponent';
+import GamePlayComponent from './components/homepage/GamePlayComponent';
 
 function App() {
   const [viewMode, setViewMode] = useState("home");
@@ -20,6 +20,7 @@ function App() {
       imgsrc: '../img/game2_thumbnail.jpg'
     }
   ]);
+  const [currentMusicID, setCurrentMusicID] = useState(1);
 
   return (
     <div className="App">
@@ -31,7 +32,9 @@ function App() {
         setViewMode={setViewMode}
         musicList={musicList}/>}
       {viewMode === 'play' && <GamePlayComponent 
-        viewMode={viewMode}/>
+        viewMode={viewMode}
+        setViewMode={setViewMode}
+        currentMusicID={currentMusicID}/>
       }
     </div>
   );

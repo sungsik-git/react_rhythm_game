@@ -1,6 +1,6 @@
 import React from 'react'
-import Background from './Background'
-import GameStartButton from './GameStartButton';
+import Background from '../Background'
+import GameStartButton from '../GameStartButton';
 
 function HomeComponent(props){
     return(

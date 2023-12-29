@@ -1,7 +1,7 @@
 import React from 'react';
-import Background from './Background';
-import HomeButton from './HomeButton';
-import GameList from './GameList';
+import Background from '../Background';
+import HomeButton from '../HomeButton';
+import GameList from '../GameList';
 
 function GameChoiceComponent(props){
     return(
