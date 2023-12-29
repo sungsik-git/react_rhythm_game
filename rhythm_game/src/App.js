@@ -1,25 +1,35 @@
 import React, { useState } from 'react';
 import './App.css';
 import HomeComponent from './components/HomeComponent';
-import GameComponent from './components/GameComponent';
+import GameChoiceComponent from './components/GameChoiceComponent';
 
 function App() {
   const [viewMode, setViewMode] = useState("home");
-
-  if(viewMode === 'home'){
-
-  }else if(viewMode === 'game'){
-
-  }
+  const [musicList, setMusicList] = useState([
+    { 
+      id: 1, 
+      title: 'game1', 
+      musicsrc: '../music/game1_selected.mp3', 
+      imgsrc: '../img/game1_thumbnail.jpg' 
+    },
+    { 
+      id: 2, 
+      title: 'game2', 
+      musicsrc: '../music/game2_selected.mp3', 
+      imgsrc: '../img/game2_thumbnail.jpg'
+    }
+  ]);
 
   return (
     <div className="App">
       {viewMode === 'home' && <HomeComponent 
         viewMode={viewMode}
         setViewMode={setViewMode}/>}
-      {viewMode === 'game' && <GameComponent
+      {viewMode === 'game' && <GameChoiceComponent
         viewMode={viewMode}
-        setViewMode={setViewMode}/>}
+        setViewMode={setViewMode}
+        musicList={musicList}/>
+        }
     </div>
   );
 }

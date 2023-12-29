@@ -8,6 +8,7 @@ function HomeButton(props) {
         onClick={() => {
           props.setViewMode("home");
         }}
+        value={"Home"}
       />
     );
   }
