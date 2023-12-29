@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import HomeComponent from './components/HomeComponent';
 import GameChoiceComponent from './components/GameChoiceComponent';
+import GamePlayComponent from './components/GamePlayComponent';
 
 function App() {
   const [viewMode, setViewMode] = useState("home");
@@ -28,8 +29,10 @@ function App() {
       {viewMode === 'game' && <GameChoiceComponent
         viewMode={viewMode}
         setViewMode={setViewMode}
-        musicList={musicList}/>
-        }
+        musicList={musicList}/>}
+      {viewMode === 'play' && <GamePlayComponent 
+        viewMode={viewMode}/>
+      }
     </div>
   );
 }

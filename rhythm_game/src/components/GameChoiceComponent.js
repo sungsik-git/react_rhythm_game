@@ -11,7 +11,7 @@ function GameChoiceComponent(props){
             <HomeButton
             setViewMode={props.setViewMode}/>
             <GameList 
-            musicList={props.musicList}/>
+            musicList={props.musicList} setViewMode={props.setViewMode}/>
         </div>
     );
 }
