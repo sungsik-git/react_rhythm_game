@@ -5,6 +5,7 @@ function GameStartButton(props) {
       <input 
         type='button' 
         id="gameStartButton" 
+        value="Game  Start"
         onClick={() => {
           props.setViewMode("game");
         }}

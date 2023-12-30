@@ -6,7 +6,8 @@ function GameList(props) {
       {props.musicList.map(game => (
         <div key={game.id}>
           <img src={game.imgsrc} alt={game.title} onClick={(e) => {
-            props.setViewMode("play")
+            props.setViewMode('play')
+            props.setCurrentMusicID(game.id)
           }} />
         </div>
       ))}

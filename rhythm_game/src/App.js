@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import HomeComponent from './components/homepage/HomeComponent';
 import GameChoiceComponent from './components/homepage/GameChoiceComponent';
-import GamePlayComponent from './components/homepage/GamePlayComponent';
+import Game1_Component from './components/playView/Game1_Component';
 
 function App() {
   const [viewMode, setViewMode] = useState("home");
@@ -30,11 +30,14 @@ function App() {
       {viewMode === 'game' && <GameChoiceComponent
         viewMode={viewMode}
         setViewMode={setViewMode}
-        musicList={musicList}/>}
-      {viewMode === 'play' && <GamePlayComponent 
+        musicList={musicList}
+        setMusicList={setMusicList}
+        currentMusicID={currentMusicID}
+        setCurrentMusicID={setCurrentMusicID}/>}
+      {viewMode === 'play' && currentMusicID === 1 && <Game1_Component 
         viewMode={viewMode}
         setViewMode={setViewMode}
-        currentMusicID={currentMusicID}/>
+        />
       }
     </div>
   );

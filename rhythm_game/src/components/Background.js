@@ -10,8 +10,10 @@ function Background(props) {
         background = <img src={require('../img/game_choice_background.jpg')} id='background'/>
     }else if(viewMode === 'play'){
         //선택한 노래의 ID에 따라 해당곡의 썸네일이 출력
-        if(currentMusicID === '1'){
-        background = <img src={require('../img/game1_thumbnail.jpg')} id='background'/>
+        if(currentMusicID === 1){
+            background = <img src={require('../img/game1_thumbnail.jpg')} id='background'/>
+        }else if(currentMusicID === 2){
+            background = <img src={require('../img/game2_thumbnail.jpg')} id='background'/>
         }
     }
   return background;
