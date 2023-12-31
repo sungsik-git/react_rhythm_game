@@ -26,3 +26,10 @@
   left: 1680px;
   top: 30px;
 }
+
+.musicListImg{
+  position: absolute;
+  width: 350px;
+  top: 300px;
+  left: 880px;
+}

@@ -18,6 +18,24 @@ function App() {
       title: 'game2', 
       musicsrc: '../music/game2_selected.mp3', 
       imgsrc: '/img/game2_thumbnail.jpg'
+    },
+    { 
+      id: 3, 
+      title: 'game3', 
+      musicsrc: '../music/game3_selected.mp3', 
+      imgsrc: '/img/game3_thumbnail.jpg'
+    },
+    { 
+      id: 4,
+      title: 'game4', 
+      musicsrc: '../music/game4_selected.mp3', 
+      imgsrc: '/img/game4_thumbnail.jpg'
+    },
+    { 
+      id: 5, 
+      title: 'game5', 
+      musicsrc: '../music/game5_selected.mp3', 
+      imgsrc: '/img/game5_thumbnail.jpg'
     }
   ]);
   const [currentMusicID, setCurrentMusicID] = useState(1);

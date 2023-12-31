@@ -15,6 +15,12 @@ function Background(props) {
             background = <img src={'/img/game1_thumbnail.jpg'} id='background' alt='Game 1 Thumbnail' />;
         }else if(currentMusicID === 2){
             background = <img src={'/img/game2_thumbnail.jpg'} id='background' alt='Game 2 Thumbnail' />;
+        }else if(currentMusicID === 3){
+            background = <img src={'/img/game3_thumbnail.jpg'} id='background' alt='Game 2 Thumbnail' />;
+        }else if(currentMusicID === 4){
+            background = <img src={'/img/game4_thumbnail.jpg'} id='background' alt='Game 2 Thumbnail' />;
+        }else if(currentMusicID === 5){
+            background = <img src={'/img/game5_thumbnail.jpg'} id='background' alt='Game 2 Thumbnail' />;
         }
     }
 

@@ -5,7 +5,7 @@ function GameList(props) {
     <div id='gameListBox'>
       {props.musicList.map(game => (
         <div key={game.id}>
-          <img src={game.imgsrc} alt={game.title} onClick={(e) => {
+          <img src={game.imgsrc} alt={game.title} class='musicListImg' onClick={(e) => {
             props.setViewMode('play')
             props.setCurrentMusicID(game.id)
           }} />
