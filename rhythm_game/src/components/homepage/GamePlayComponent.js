@@ -3,12 +3,13 @@ import Background from '../Background'
 import HomeButton from '../HomeButton';
 import GameChoiceButton from '../GameChoiceButton';
 
-function Game1_Component(props){
+function GamePlayComponent(props){
     return(
         <div>
             <Background 
             viewMode={props.viewMode}
-            currentMusicID={props.currentMusicID}/>
+            currentMusicID={props.currentMusicID}
+            musicList={props.musicList}/>
             <HomeButton
             setViewMode={props.setViewMode}/>
             <GameChoiceButton
@@ -17,4 +18,4 @@ function Game1_Component(props){
     );
 }
 
-export default Game1_Component
+export default GamePlayComponent

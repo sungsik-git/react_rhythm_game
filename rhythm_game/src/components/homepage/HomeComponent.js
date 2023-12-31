@@ -6,7 +6,8 @@ function HomeComponent(props){
     return(
         <div>
             <Background 
-            viewMode={props.viewMode}/>
+            viewMode={props.viewMode}
+            currentMusicID={props.currentMusicID}/>
             <GameStartButton
             setViewMode={props.setViewMode} />
         </div>

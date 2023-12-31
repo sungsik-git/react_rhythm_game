@@ -7,7 +7,8 @@ function GameChoiceComponent(props){
     return(
         <div>
             <Background 
-                viewMode={props.viewMode}/>
+                viewMode={props.viewMode}
+                currentMusicID={props.currentMusicID}/>
             <HomeButton
                 setViewMode={props.setViewMode}/>
             <GameList 

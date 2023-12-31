@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import HomeComponent from './components/homepage/HomeComponent';
 import GameChoiceComponent from './components/homepage/GameChoiceComponent';
-import Game1_Component from './components/playView/Game1_Component';
+import GamePlayComponent from './components/homepage/GamePlayComponent';
 
 function App() {
   const [viewMode, setViewMode] = useState("home");
@@ -11,32 +11,41 @@ function App() {
       id: 1, 
       title: 'game1', 
       musicsrc: '../music/game1_selected.mp3', 
-      imgsrc: '../img/game1_thumbnail.jpg' 
+      imgsrc: '/img/game1_thumbnail.jpg' 
     },
     { 
       id: 2, 
       title: 'game2', 
       musicsrc: '../music/game2_selected.mp3', 
-      imgsrc: '../img/game2_thumbnail.jpg'
+      imgsrc: '/img/game2_thumbnail.jpg'
     }
   ]);
   const [currentMusicID, setCurrentMusicID] = useState(1);
-
+  console.log(currentMusicID)
   return (
     <div className="App">
       {viewMode === 'home' && <HomeComponent 
         viewMode={viewMode}
-        setViewMode={setViewMode}/>}
+        setViewMode={setViewMode}
+        musicList={musicList}
+        currentMusicID={currentMusicID}
+        />
+      }
+
       {viewMode === 'game' && <GameChoiceComponent
         viewMode={viewMode}
         setViewMode={setViewMode}
         musicList={musicList}
         setMusicList={setMusicList}
         currentMusicID={currentMusicID}
-        setCurrentMusicID={setCurrentMusicID}/>}
-      {viewMode === 'play' && currentMusicID === 1 && <Game1_Component 
+        setCurrentMusicID={setCurrentMusicID}/>
+      }
+
+      {viewMode === 'play' && <GamePlayComponent 
         viewMode={viewMode}
         setViewMode={setViewMode}
+        musicList={musicList}
+        currentMusicID={currentMusicID}
         />
       }
     </div>
