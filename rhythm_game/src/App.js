@@ -39,7 +39,6 @@ function App() {
     }
   ]);
   const [currentMusicID, setCurrentMusicID] = useState(1);
-  console.log(currentMusicID)
   return (
     <div className="App">
       {viewMode === 'home' && <HomeComponent 
