@@ -3,6 +3,7 @@ import Background from '../Background'
 import HomeButton from '../button/HomeButton';
 import GameChoiceButton from '../button/GameChoiceButton';
 import SelectedGameInfo from '../SelectedGameInfo';
+import KeypadUI from '../KeypadUI';
 
 function GamePlayComponent(props){
     return(
@@ -21,6 +22,7 @@ function GamePlayComponent(props){
             musicList={props.musicList}
             currentMusicID={props.currentMusicID}
             />
+            <KeypadUI />
         </div>
     );
 }
