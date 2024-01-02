@@ -1,4 +1,5 @@
 import React from "react";
+import KeypadInfo from "./KeypadInfo";
 
 function KeypadUI(){
     return(
@@ -18,7 +19,9 @@ function KeypadUI(){
             <img src="../img/noteRouteLine.png" className="routeLine"></img>
             <img src="../img/noteRoute.png" id="routeL"></img>
             <img src="../img/noteRouteLine.png" className="routeLine"></img>
+            <KeypadInfo />
         </div>
+        
     );
 }
 

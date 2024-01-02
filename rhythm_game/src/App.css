@@ -80,3 +80,23 @@
 #keypadContainer > img{
   height: 900px;
 }
+
+#keypadInfoContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  bottom: 20px;
+  left: 70px;
+}
+
+#keypadInfoContainer > div:not(#keySpace){
+  width: 152px;
+  padding-left: 2px;
+  font-weight: bold;
+}
+
+#keySpace{
+  width: 255px;
+  padding-left: 75px;
+  font-weight: bold;
+}
