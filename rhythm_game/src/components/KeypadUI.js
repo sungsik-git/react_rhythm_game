@@ -18,8 +18,8 @@ function KeypadUI(){
             <img src="../img/noteRoute.png" id="routeK"></img>
             <img src="../img/noteRouteLine.png" className="routeLine"></img>
             <img src="../img/noteRoute.png" id="routeL"></img>
-            <img src="../img/noteRouteLine.png" className="routeLine"></img>
             <KeypadInfo />
+            <img src="../img/judgementLine.png" id="judgementLine"></img>
         </div>
         
     );

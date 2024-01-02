@@ -89,8 +89,15 @@
   left: 325px;
 }
 
-#keypadContainer > img{
+#keypadContainer > img:not(#judgementLine){
   height: 900px;
+}
+
+#judgementLine{
+  position: absolute;
+  bottom: 10px;
+  left: 2px;
+  width: 1250px;
 }
 
 #keypadInfoContainer {
