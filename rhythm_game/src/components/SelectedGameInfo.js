@@ -7,6 +7,7 @@ function SelectedGameInfo(props){
       <div id="selectedGameInfoContainer">
         {currentMusic && (<div key={currentMusic.id} id="selectedGameInfo">
             <div>{currentMusic.title}</div>
+            <div>{props.gameScore}</div>
             <div>{currentMusic.artist}</div>
         </div>
         )}

@@ -21,6 +21,7 @@ function GamePlayComponent(props){
             <SelectedGameInfo
             musicList={props.musicList}
             currentMusicID={props.currentMusicID}
+            gameScore={props.gameScore}
             />
             <KeypadUI />
         </div>
