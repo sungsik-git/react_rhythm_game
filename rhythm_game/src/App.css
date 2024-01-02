@@ -30,10 +30,24 @@
 .musicListImg{
   position: absolute;
   width: 350px;
+  height: 270px;
   top: 300px;
   left: 880px;
 }
 
-#gameListBox{
-  
+#listButtonContainer {
+  position: absolute;
+  width: 800px;
+  top: 400px;
+  left: 660px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#prevButton, #nextButton {
+  border: 0;
+  border-radius: 80px;
+  background-color: white;
+  padding: 20px;
+  font-size: 24px;
 }

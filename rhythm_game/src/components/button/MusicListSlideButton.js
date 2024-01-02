@@ -23,14 +23,14 @@ function MusicListSlideButton(props) {
     };
     
   return (
-    <div>
+    <div id='listButtonContainer'>
       <input
-        type="button"
+        type="button" id="prevButton"
         onClick={() => prevHandle() }
         value="Prev"
       ></input>
       <input
-        type="button"
+        type="button" id="nextButton"
         onClick={() => nextHandle() }
         value="Next"
       ></input>
