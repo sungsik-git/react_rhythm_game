@@ -36,6 +36,18 @@
   z-index: 99999;
 }
 
+#musicInfo{
+  position: absolute;
+  width: 350px;
+  top: 600px;
+  left: 870px;
+  background-color: white;
+  z-index: 99999;
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+}
+
 #listButtonContainer {
   position: absolute;
   width: 800px;
@@ -86,17 +98,20 @@
   display: flex;
   flex-direction: row;
   bottom: 20px;
-  left: 70px;
 }
 
 #keypadInfoContainer > div:not(#keySpace){
   width: 152px;
-  padding-left: 2px;
   font-weight: bold;
+  text-align: center;
+  padding-left: 4px;
 }
 
 #keySpace{
   width: 255px;
-  padding-left: 75px;
+  text-align: center;
   font-weight: bold;
+  padding-left: 30px;
+  padding-right: 30px;
 }
+

@@ -16,6 +16,7 @@ function GameList(props) {
               props.setCurrentMusicID(currentMusic.id);
             }}
           />
+          <div id='musicInfo'>{currentMusic.title} - {currentMusic.artist}</div>
         </div>
       )}
     </div>
