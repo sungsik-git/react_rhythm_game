@@ -1,20 +1,13 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 function KeyPressCheck(props) {
   const {
-    sKeyPressed,
     setSKeyPressed,
-    dKeyPressed,
     setDKeyPressed,
-    fKeyPressed,
     setFKeyPressed,
-    spaceKeyPressed,
     setSpaceKeyPressed,
-    jKeyPressed,
     setJKeyPressed,
-    kKeyPressed,
     setKKeyPressed,
-    lKeyPressed,
     setLKeyPressed,
   } = props;
 

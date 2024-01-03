@@ -45,19 +45,12 @@ function GamePlayComponent(props){
             />
             {/* keyPressCheck */}
             <KeyPressCheck 
-                sKeyPressed={sKeyPressed}
                 setSKeyPressed={setSKeyPressed}
-                dKeyPressed={dKeyPressed}
                 setDKeyPressed={setDKeyPressed}
-                fKeyPressed={fKeyPressed}
                 setFKeyPressed={setFKeyPressed}
-                spaceKeyPressed={spaceKeyPressed}
                 setSpaceKeyPressed={setSpaceKeyPressed}
-                jKeyPressed={jKeyPressed}
                 setJKeyPressed={setJKeyPressed}
-                kKeyPressed={kKeyPressed}
                 setKKeyPressed={setKKeyPressed}
-                lKeyPressed={lKeyPressed}
                 setLKeyPressed={setLKeyPressed}
             />
             {/* Note */}
