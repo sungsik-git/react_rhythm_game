@@ -45,6 +45,8 @@ function App() {
   ]);
   const [currentMusicID, setCurrentMusicID] = useState(1);
   const [gameScore, setGameScore] = useState(0);
+  
+
 
   return (
     <div className="App">
