@@ -36,7 +36,7 @@ function KeyPressCheck(props) {
         setJKeyPressed(true);
         break;
       case "k":
-        setJKeyPressed(true);
+        setKKeyPressed(true);
         break;
       case "l":
         setLKeyPressed(true);
@@ -64,7 +64,7 @@ function KeyPressCheck(props) {
         setJKeyPressed(false);
         break;
       case "k":
-        setJKeyPressed(false);
+        setKKeyPressed(false);
         break;
       case "l":
         setLKeyPressed(false);
