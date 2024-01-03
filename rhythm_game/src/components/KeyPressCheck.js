@@ -30,6 +30,7 @@ function KeyPressCheck(props) {
         break;
       case " ":
         setSpaceKeyPressed(true);
+        e.preventDefault();
         break;
       case "j":
       case "ㅓ":
@@ -70,6 +71,7 @@ function KeyPressCheck(props) {
         break;
       case " ":
         setSpaceKeyPressed(false);
+        e.preventDefault();
         break;
       case "j":
       case "ㅓ":

@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 
 function Note(){
-    return(
-        <div></div>
+    return (
+        <div>
+        </div>
     );
-}
-
+          
+};
 export default Note

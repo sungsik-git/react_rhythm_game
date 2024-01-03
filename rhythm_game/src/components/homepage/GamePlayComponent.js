@@ -6,6 +6,7 @@ import SelectedGameInfo from '../SelectedGameInfo';
 import KeypadUI from '../KeypadUI';
 import KeyPressCheck from '../KeyPressCheck';
 import Note from '../Note';
+import Game from '../Game';
 
 function GamePlayComponent(props){
     //key pressed check
@@ -54,7 +55,7 @@ function GamePlayComponent(props){
                 setLKeyPressed={setLKeyPressed}
             />
             {/* Note */}
-            <Note />
+            <Game />
         </div>
     );
     
