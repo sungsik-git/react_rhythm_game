@@ -53,9 +53,6 @@ function KeypadUI(props){
         } else {
           document.getElementById("routeL").src = "../img/noteRoute.png";
         }
-      
-        // 다른 키에 대한 조작도 수행...
-      
       }, [props.sKeyPressed, props.dKeyPressed, props.fKeyPressed, props.spaceKeyPressed, props.jKeyPressed, props.kKeyPressed, props.lKeyPressed]);
       
     return(
