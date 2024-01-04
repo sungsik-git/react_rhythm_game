@@ -5,7 +5,7 @@ import GameChoiceButton from '../button/GameChoiceButton';
 import SelectedGameInfo from '../SelectedGameInfo';
 import KeypadUI from '../KeypadUI';
 import KeyPressCheck from '../KeyPressCheck';
-import Game from '../Game';
+import GameLoader from '../GameLoader';
 
 function GamePlayComponent(props){
     //key pressed check
@@ -53,9 +53,9 @@ function GamePlayComponent(props){
                 setKKeyPressed={setKKeyPressed}
                 setLKeyPressed={setLKeyPressed}
             />
-            {/* Note */}
-            <Game 
-                noteSpeed={noteSpeed}
+            {/* call current music game */}
+            <GameLoader 
+                currentMusicID={props.currentMusicID}
             />
         </div>
     );

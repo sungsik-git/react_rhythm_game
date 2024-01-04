@@ -1,7 +1,7 @@
 import React from "react";
-import Note from "./Note";
+import Game1Note from "../note/Game1Note";
 
-function Game(props) {
+function Game1Loading(props) {
     const handleMiss = () => {
         console.log("Missed!");
         // 노트를 놓친 경우 수행할 작업을 추가합니다.
@@ -18,7 +18,7 @@ function Game(props) {
           { startTime: 3000, keypad: "l", pressTime: 0 },
         ];
         return notesData.map((noteData, index) => (
-            <Note
+            <Game1Note
               key={index}
               startTime={noteData.startTime}
               keypad={noteData.keypad}
@@ -32,4 +32,4 @@ function Game(props) {
         return <div>{createNotes()}</div>;
 }
 
-export default Game;
+export default Game1Loading;

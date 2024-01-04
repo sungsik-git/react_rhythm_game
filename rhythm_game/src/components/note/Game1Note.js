@@ -1,24 +1,27 @@
 import React, { useState, useEffect } from "react";
 
-function Note(props) {
-  const [bottom, setButtom] = useState(900);
+function Game1Note(props) {
+  const [bottom, setBottom] = useState(900);
   const [missed, setMissed] = useState(false);
+
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      const speed = 5;
-      const newButtom = bottom - speed;
+    const timeoutId = setTimeout(() => {
+      const intervalId = setInterval(() => {
+        const speed = 5;
+        setBottom((prevBottom) => prevBottom - speed);
 
-      setButtom(newButtom);
+        if (bottom <= 0) {
+          setMissed(true);
+          clearInterval(intervalId);
+          props.onMiss();
+        }
+      }, 16);
 
-      if (newButtom <= 0) {
-        setMissed(true);
-        clearInterval(intervalId);
-        props.onMiss();
-      }
-    }, 16);
+      return () => clearInterval(intervalId);
+    }, props.startTime);
 
-    return () => clearInterval(intervalId);
-  }, [bottom, props.onMiss]);
+    return () => clearTimeout(timeoutId);
+  }, [bottom, props.startTime, props.onMiss]);
 
   const setXPosition = (keypad) => {
     switch (keypad) {
@@ -60,4 +63,4 @@ function Note(props) {
   );
 }
 
-export default Note;
+export default Game1Note;
