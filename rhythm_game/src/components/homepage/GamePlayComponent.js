@@ -9,14 +9,14 @@ import Game from '../Game';
 
 function GamePlayComponent(props){
     //key pressed check
-    const [sKeyPressed, setSKeyPressed] = useState(false)
-    const [dKeyPressed, setDKeyPressed] = useState(false)
-    const [fKeyPressed, setFKeyPressed] = useState(false)
-    const [spaceKeyPressed, setSpaceKeyPressed] = useState(false)
-    const [jKeyPressed, setJKeyPressed] = useState(false)
-    const [kKeyPressed, setKKeyPressed] = useState(false)
-    const [lKeyPressed, setLKeyPressed] = useState(false)
-    
+    const [sKeyPressed, setSKeyPressed] = useState(false);
+    const [dKeyPressed, setDKeyPressed] = useState(false);
+    const [fKeyPressed, setFKeyPressed] = useState(false);
+    const [spaceKeyPressed, setSpaceKeyPressed] = useState(false);
+    const [jKeyPressed, setJKeyPressed] = useState(false);
+    const [kKeyPressed, setKKeyPressed] = useState(false);
+    const [lKeyPressed, setLKeyPressed] = useState(false);
+    const [noteSpeed] = useState(3);
     return(
         <div>
             <Background 
@@ -54,7 +54,9 @@ function GamePlayComponent(props){
                 setLKeyPressed={setLKeyPressed}
             />
             {/* Note */}
-            <Game />
+            <Game 
+                noteSpeed={noteSpeed}
+            />
         </div>
     );
     

@@ -2,6 +2,11 @@ import React from "react";
 import Note from "./Note";
 
 function Game(props) {
+    const handleMiss = () => {
+        console.log("Missed!");
+        // 노트를 놓친 경우 수행할 작업을 추가합니다.
+      };
+    
     const createNotes = () => {
         const notesData = [
           { startTime: 1000, keypad: "s", pressTime: 0 },
@@ -18,6 +23,8 @@ function Game(props) {
               startTime={noteData.startTime}
               keypad={noteData.keypad}
               pressTime={noteData.pressTime}
+              noteSpeed={props.noteSpeed}
+              onMiss={handleMiss}
             />
           ));
         };
