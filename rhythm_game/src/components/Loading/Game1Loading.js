@@ -12,10 +12,10 @@ function Game1Loading(props) {
           { startTime: 1000, keypad: "s", pressTime: 0 },
           { startTime: 2000, keypad: "d", pressTime: 0 },
           { startTime: 3000, keypad: "f", pressTime: 0 },
-          { startTime: 3000, keypad: "space", pressTime: 0 },
-          { startTime: 3000, keypad: "j", pressTime: 0 },
-          { startTime: 3000, keypad: "k", pressTime: 0 },
-          { startTime: 3000, keypad: "l", pressTime: 0 },
+          { startTime: 4000, keypad: "space", pressTime: 0 },
+          { startTime: 5000, keypad: "j", pressTime: 0 },
+          { startTime: 6000, keypad: "k", pressTime: 0 },
+          { startTime: 7000, keypad: "l", pressTime: 0 },
         ];
         return notesData.map((noteData, index) => (
             <Game1Note
