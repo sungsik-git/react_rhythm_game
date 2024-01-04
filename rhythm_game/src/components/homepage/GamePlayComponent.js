@@ -5,7 +5,6 @@ import GameChoiceButton from '../button/GameChoiceButton';
 import SelectedGameInfo from '../SelectedGameInfo';
 import KeypadUI from '../KeypadUI';
 import KeyPressCheck from '../KeyPressCheck';
-import Note from '../Note';
 import Game from '../Game';
 
 function GamePlayComponent(props){
