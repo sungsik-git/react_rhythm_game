@@ -3,60 +3,34 @@ import React, { useState, useEffect } from "react";
 function Game1Note(props) {
   const [bottom, setBottom] = useState(900);
   const [missed, setMissed] = useState(false);
-  const [visibility, setVisibility] = useState('hidden');
-  const [isNoteDropping, setIsNoteDropping] = useState(true);
+  const [visibility, setVisibility] = useState('visibility');
+  var noteSpeed = 5;
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      const intervalId = setInterval(() => {
-        const speed = 5;
+    const intervalId = setInterval(() => {
+      setBottom((prevBottom) => {
 
-        setBottom((prevBottom) => {
-          const newBottom = prevBottom - speed;
+        let newBottom = prevBottom - noteSpeed;
 
-          if (newBottom <= 0) {
-            setMissed(true);
-            clearInterval(intervalId);
-            props.onMiss();
-          }
+        if (newBottom <= 0) {
+          setMissed(true);
+          clearInterval(intervalId);
+        }
 
-          if (newBottom < 80) {
-            setVisibility('hidden');
-          }
+        if (newBottom < 80) {
+          setVisibility('hidden');
+        } else {
+          setVisibility('block');
+        }
 
-          return newBottom;
-        });
-      }, 16);
+        return newBottom;
+      });
+    }, 16);
 
-      return () => clearInterval(intervalId);
-    }, props.startTime);
+    return () => clearInterval(intervalId);
+  }, [props.onMiss]);
 
-    return () => clearTimeout(timeoutId);
-  }, [props.startTime, props.onMiss]);
-
-  const handleKeyDown = (event) => {
-    if (!isNoteDropping) {
-      // 노트가 떨어지는 중에만 키보드 이벤트 처리
-      // 특정 키에 대한 처리 등을 추가할 수 있음
-    }
-  };
-
-  const handleKeyUp = (event) => {
-    if (!isNoteDropping) {
-      // 노트가 떨어지는 중에만 키보드 이벤트 처리
-      // 특정 키에 대한 처리 등을 추가할 수 있음
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('keydown', handleKeyDown);
-    window.addEventListener('keyup', handleKeyUp);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('keyup', handleKeyUp);
-    };
-  }, [isNoteDropping, handleKeyDown, handleKeyUp]);
+  
 
   const setXPosition = (keypad) => {
     switch (keypad) {
